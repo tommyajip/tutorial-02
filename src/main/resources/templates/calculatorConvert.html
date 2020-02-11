@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Calculator Convert</title>
+    </head>
+    <body>
+        <h1>Calculator Convert</h1>
+        <h3>Kalkulator Penjumlahan Bilangan Yang Dikonvert Menjadi Kata-Kata</h3>
+        <h3>Masukkan:</h3>
+        <form th:action="@{/calculatorConvert}" th:object="${prosesPerhitungan}" method="post">
+            <table>
+			    <tr>
+			        <td><label for="angka_satu">Angka Pertama</label></td>
+            		<td><input type="text" id="angka1" name="angka1" /></td>
+			    </tr>
+			    <tr>
+			        <td><label for="angka_dua">Angka Kedua</label></td>
+            		<td><input type="text" id="angka2" name="angka2" /></td>
+			    </tr>
+			    <tr>
+			        <td><input type="submit" value="Proses" /></td>
+			    </tr>
+			    <tr>
+			        <td><label for="hasil">Hasil Penjumlahan</label></td>
+            		<td><input th:type="text" th:name="hasil" th:value="${hasil}" /></td>
+			    </tr>
+			    <tr>
+			        <td><label for="kataKata">Hasil Dalam Kata-Kata</label></td>
+            		<td><input th:type="text" th:name="kataKata" th:value="${kataKata}" /></td>
+			    </tr>
+			</table>
+        </form>
+    </body>
+</html>
